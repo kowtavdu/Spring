@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+<bean id="requestProcessor" class="com.saurabh.mykong.bean.RequestProcessor">
+    <lookup-method name="validator" bean="validator"/>
+</bean>
+ 
+<bean id="validator" scope="prototype" class="com.saurabh.mykong.bean.RequestValidator"/>
+</beans>
+
+
